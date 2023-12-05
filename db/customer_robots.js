@@ -4,9 +4,9 @@ const client = require('./client.js');
 const createCustomersRobots = async(customers_id, robots_id) =>{
     try{
         await client.query(`
-        INSERT INTO customers_robots (customers_id)
-        VALUES ('${customers_id}');
-        (robots_id) VALUES ('${robots_id}');
+        INSERT INTO customers_robots (customers_id, robots_id)
+        VALUES ('${customers_id}', '${robots_id}');
+        
         `)
     }catch(error){
         console.log(error)

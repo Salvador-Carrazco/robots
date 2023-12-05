@@ -95,12 +95,29 @@ const syncAndSeed = async () => {
         await createTask('cooking', 2);
         await createTask('gardening', 3);
         await createTask('washing', 4);
-
+        console.log(`tasks are created`);
        
         //create customer_robots
-       
+        await createCustomersRobots(1,1);
+        await createCustomersRobots(1,2);
+        await createCustomersRobots(1,3);
+        await createCustomersRobots(2,2);
+        await createCustomersRobots(2,3);   
+        await createCustomersRobots(2,4);
+        await createCustomersRobots(3,1);
+        await createCustomersRobots(3,2);
+        await createCustomersRobots(3,4);
+        console.log(`customers_robots are created`);
         //create robots_tasks
-
+        await createRobotsTasks(1,1);
+        await createRobotsTasks(1,2);
+        await createRobotsTasks(2,3);
+        await createRobotsTasks(2,2);
+        await createRobotsTasks(3,1);
+        await createRobotsTasks(3,2);
+        await createRobotsTasks(4,3);
+        await createRobotsTasks(4,4);
+        console.log(`robots_tasks are created`);
 
         client.end();
     }catch (error){
